@@ -57,3 +57,4 @@ def invert_block( im ):
 
 invert_block(bear)
 bear.save("pilbasicbearrena.png")
+#Rena is Cool - Zoe
