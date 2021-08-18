@@ -76,15 +76,41 @@ bear = Image.open( "bear.png" )
 #mirrorHoriz(bear.png)
 #bear.save("bear4.png")
 
-def FlipVert(im):
-  (width, height) = bear.size
-  for x in range(width):
-   for y in range(int(height/2)):
+#def FlipVert(im):
+  #(width, height) = bear.size
+  #for x in range(width):
+   #for y in range(int(height/2)):
      #Divide by 2 because the middle line is the "same", taking the top half and putting it in the bottom half, taking the bottom half and putting it in the top half
-    (temp_red, temp_green, temp_blue) = bear.getpixel((x,y))
+    #(temp_red, temp_green, temp_blue) = bear.getpixel((x,y))
     #We need to put new pixel into original x-place
-    bear.putpixel((x,y),(bear.getpixel((x,height-y-1))))
-    bear.putpixel((x, height-y-1), (temp_red, temp_green, temp_blue))
+    #bear.putpixel((x,y),(bear.getpixel((x,height-y-1))))
+    #bear.putpixel((x, height-y-1), (temp_red, temp_green, temp_blue))
 
-FlipVert(bear.png)
-bear.save("bear5.png")
+#FlipVert(bear.png)
+#bear.save("bear5.png")
+#Scale
+#(temp_red, temp_green, temp_blue) = bear.getpixel((x,y))
+
+#bear.putpixel((x, y), (bear.getpixel((x//2, y//2))))
+      
+#bear.putpixel((x//2, y//2), (temp_red, temp_green, temp_blue))
+
+#if x >= 300 or y >= 401:
+#bear.removepixel((x,y))
+
+def scale(im):
+ 
+  (width, height) = im.size
+  temp = Image.new('RGB', (width//2,height//2))
+
+  for x in range(width):
+    for y in range(height):
+      
+      temp.putpixel((x//2, y//2), im.getpixel((x, y)))
+  
+  return temp
+
+minibear = scale(bear)
+#Called then returns picture to Mini Bear
+minibear.save("MiniBear.png")
+print(minibear.size)
