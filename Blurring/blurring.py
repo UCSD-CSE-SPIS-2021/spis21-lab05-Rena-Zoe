@@ -1,17 +1,3 @@
-#print("Running lab05Warmup_Rena.py") # let us know it's running lab05Warmup_Felix.py
-
-#import lab05Warmup_Rena              # this will cause lab05Warmup_Felix.py to run
-
-#print("Running lab05Warmup_Zoe.py")  # let us know it's running lab05Warmup_Ryan.py
-
-#import lab05Warmup_Zoe               # this will cause lab05Warmup_Ryan.py to run
-
-from PIL import Image
-
-bear = Image.open( "bear.png" )
-
-#Control slash = everything highlighted = comment
-
 #This is very minimal blur, we will come back and make more blue
 def blur(im):
  #We want to take 4 pixels in a square and turn that into 1 color to be one square
