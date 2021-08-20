@@ -1,3 +1,7 @@
+from PIL import Image
+
+bear = Image.open( "bear.png" )
+
 #This is very minimal blur, we will come back and make more blue
 def blur(im):
  #We want to take 4 pixels in a square and turn that into 1 color to be one square
@@ -30,3 +34,4 @@ def blur(im):
 
 blurbear = blur(bear)
 blurbear.save("BlurBear.png")
+

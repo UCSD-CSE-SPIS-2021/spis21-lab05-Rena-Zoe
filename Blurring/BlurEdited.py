@@ -1,27 +1,20 @@
-#print("Running lab05Warmup_Rena.py") # let us know it's running lab05Warmup_Felix.py
-
-#import lab05Warmup_Rena              # this will cause lab05Warmup_Felix.py to run
-
-#print("Running lab05Warmup_Zoe.py")  # let us know it's running lab05Warmup_Ryan.py
-
-#import lab05Warmup_Zoe               # this will cause lab05Warmup_Ryan.py to run
-
 from PIL import Image
 
 bear = Image.open( "bear.png" )
 
-#Control slash = everything highlighted = comment
-
-#This is very minimal blur, we will come back and make more blue
+#Edited one that takes too long
 def blur(im):
- #We want to take 4 pixels in a square and turn that into 1 color to be one square
+ #Zoe wanted 25 pixels in a square and turn that into 1 color to be one square
  #Think of everything in x and y
- #For loop the 4 and then moving on
+ #For loop the 25 and then moving on
   (width, height) = im.size
   temp = Image.new('RGB', (width,height))
  
   for x in range(width-5): #This will have 150 squares
    for y in range(height-5): #This will have 200 squares
+
+    #We did -5 because it's the number of rows and ensures it stays within bounds of the image
+
     #(red, green, blue) = im.getpixel((x,y))
     #average = ((int(red) + int(green) + int(blue))//3)
     #temp.putpixel((x,y), (average,average,average))
